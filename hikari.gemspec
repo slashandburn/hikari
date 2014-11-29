@@ -8,8 +8,9 @@ Gem::Specification.new do |s|
   s.authors     = ["Seth Faxon"]
   s.email       = ["seth.faxon@gmail.com"]
   s.homepage    = "https://github.com/sfaxon/hikari"
-  s.summary     = %q{Hikari is a ActiveRecord gem for sorting.}
-  s.description = %q{Hikari .}
+  s.summary     = %q{Hikari is a field and scope based sorting helper for Rails.}
+  s.description = %q{Hikari allows sorting in Rails projects based on fields or scopes.
+Sorting can be done across models via scopes.}
 
   s.rubyforge_project = "hikari"
 
