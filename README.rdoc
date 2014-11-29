@@ -1,0 +1,36 @@
+Hikari helps create sorting links for Ruby on Rails applications. It also
+allows sorting on associated models via scopes and default orders to be
+provided in the view. It pairs nicely with Kaminari, but only works with
+ActiveRecord at the moment.
+
+Simple example
+
+  class Post < ActiveRecord::Base
+    belongs_to :author, class_name: 'User'
+
+    scope :by_author_last_name, -> {
+      joins(:author).order("users.last_name")
+    }
+  end
+  class User < ActiveRecord::Base
+    has_many :posts
+  end
+
+app/controllers/posts_controller.rb
+  
+  def index
+    @posts = Post.sort(params[:sort], 'title ASC')
+  end
+
+app/views/posts/index.html.erb
+
+  <%= link_to_sorted 'Title', :title %>
+
+  <a href="/posts?sort=title_asc" class="sortable">Title</a>
+
+If a field matching the sort parameter is not found Hikari will attempt
+to apply an ActiveRecord scope that is defined on the model. To sort Posts by
+Author:
+
+  <%= link_to_sorted 'By Author', :by_author_last_name %>
+
