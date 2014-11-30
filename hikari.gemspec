@@ -7,7 +7,7 @@ Gem::Specification.new do |s|
   s.version     = Hikari::VERSION
   s.authors     = ["Seth Faxon"]
   s.email       = ["seth.faxon@gmail.com"]
-  s.homepage    = "https://github.com/sfaxon/hikari"
+  s.homepage    = "https://github.com/slashandburn/hikari"
   s.summary     = %q{Hikari is a field and scope based sorting helper for Rails.}
   s.description = %q{Hikari allows sorting in Rails projects based on fields or scopes.
 Sorting can be done across models via scopes.}
