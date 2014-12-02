@@ -34,4 +34,3 @@ Author:
 
   <%= link_to_sorted 'By Author', :by_author_last_name %>
 
-
